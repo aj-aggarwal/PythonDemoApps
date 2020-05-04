@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My notes app</title>
+</head>
+<body>
+	<h2>My notes</h2>
+	<ul>
+		{% for note in notes %}
+			<li>{{ note }}</li>
+		{% endfor %}
+	</ul>
+
+	<form action="{{url_for('index')}}" method="Post">
+		<input type="text" name="note" placeholder="Enter note here">
+		<button>Add Note</button>
+	</form>
+</body>
+</html>
